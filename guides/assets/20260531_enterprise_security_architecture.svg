@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise security architecture for AI development infrastructure</title>
+  <desc id="desc">A flow diagram showing identity, policy, isolated workspaces, secrets management, and audit logging working together.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06131f"/>
+      <stop offset="100%" stop-color="#0c1b2d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#a7f3d0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+    <style>
+      .label { font: 600 22px/1.2 Inter, Arial, sans-serif; fill: #e5e7eb; }
+      .small { font: 500 18px/1.2 Inter, Arial, sans-serif; fill: #93a4b8; }
+      .center { text-anchor: middle; }
+      .box { rx: 22; ry: 22; filter: url(#shadow); }
+      .stroke { stroke: rgba(167,243,208,0.35); stroke-width: 2; }
+      .arrow { stroke: #2dd4bf; stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .line { stroke: rgba(255,255,255,0.16); stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1120" height="600" rx="32" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)"/>
+
+  <text x="600" y="96" class="label center" style="font-size:34px; fill:#ffffff;">Secure AI Development Control Flow</text>
+  <text x="600" y="132" class="small center">Identity establishes trust, policy enforces rules, workspaces isolate execution, and audits preserve evidence.</text>
+
+  <!-- Top row -->
+  <rect class="box stroke" x="80" y="190" width="200" height="110" fill="rgba(45,212,191,0.12)"/>
+  <text x="180" y="235" class="label center">SSO / MFA</text>
+  <text x="180" y="266" class="small center">Identity provider</text>
+
+  <rect class="box stroke" x="340" y="190" width="220" height="110" fill="rgba(255,255,255,0.04)"/>
+  <text x="450" y="235" class="label center">Policy Engine</text>
+  <text x="450" y="266" class="small center">Roles, approvals, rules</text>
+
+  <rect class="box stroke" x="620" y="190" width="220" height="110" fill="rgba(45,212,191,0.16)"/>
+  <text x="730" y="232" class="label center">AI Workspace</text>
+  <text x="730" y="264" class="small center">Ephemeral runtime</text>
+
+  <rect class="box stroke" x="900" y="190" width="220" height="110" fill="rgba(255,255,255,0.04)"/>
+  <text x="1010" y="232" class="label center">Telemetry</text>
+  <text x="1010" y="264" class="small center">Audit trail + monitoring</text>
+
+  <!-- arrows row 1 -->
+  <path class="arrow" d="M280 245 C300 245, 315 245, 340 245"/>
+  <path class="arrow" d="M560 245 C580 245, 595 245, 620 245"/>
+  <path class="arrow" d="M840 245 C860 245, 875 245, 900 245"/>
+
+  <!-- bottom row -->
+  <rect class="box stroke" x="120" y="430" width="250" height="120" fill="rgba(255,255,255,0.04)"/>
+  <text x="245" y="476" class="label center">Secrets Vault</text>
+  <text x="245" y="508" class="small center">Scoped credentials only</text>
+
+  <rect class="box stroke" x="460" y="430" width="280" height="120" fill="rgba(45,212,191,0.14)"/>
+  <text x="600" y="476" class="label center">Sensitive Data Paths</text>
+  <text x="600" y="508" class="small center">Minimize, redact, retain intentionally</text>
+
+  <rect class="box stroke" x="820" y="430" width="260" height="120" fill="rgba(255,255,255,0.04)"/>
+  <text x="950" y="476" class="label center">Compliance Evidence</text>
+  <text x="950" y="508" class="small center">Exports, retention, reviews</text>
+
+  <!-- connectors down -->
+  <path class="arrow" d="M730 300 C730 340, 600 350, 600 430"/>
+  <path class="arrow" d="M1010 300 C1010 350, 950 370, 950 430"/>
+  <path class="arrow" d="M450 300 C450 350, 245 370, 245 430"/>
+
+  <!-- footer -->
+  <line x1="80" y1="592" x2="1120" y2="592" class="line"/>
+  <text x="600" y="628" class="small center">A good security model makes the secure path the default path.</text>
+</svg>
