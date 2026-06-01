@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">Persistent AI environment workflow</title>
+  <desc id="desc">A three-step diagram showing the move from ephemeral sandboxes to a persistent Daytona workspace and the resulting speed gains.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#475569"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Inter, Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 16px Inter, Arial, sans-serif; fill: #475569; }
+      .panelTitle { font: 700 22px Inter, Arial, sans-serif; fill: #0f172a; }
+      .label { font: 600 16px Inter, Arial, sans-serif; fill: #334155; }
+      .small { font: 400 15px Inter, Arial, sans-serif; fill: #475569; }
+      .badge { font: 700 14px Inter, Arial, sans-serif; fill: white; }
+      .box { fill: white; stroke: #cbd5e1; stroke-width: 2; rx: 22; }
+      .accent { stroke: #0f766e; }
+      .muted { stroke: #94a3b8; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="1200" height="480" fill="url(#bg)"/>
+  <text x="60" y="58" class="title">Persistent AI environments keep the expensive parts warm</text>
+  <text x="60" y="90" class="subtitle">Stop recreating the same workspace on every run. Preserve the state that makes AI work repeatable.</text>
+
+  <rect x="60" y="140" width="300" height="240" class="box"/>
+  <text x="90" y="182" class="panelTitle">Ephemeral sandbox</text>
+  <rect x="90" y="208" width="108" height="30" rx="15" fill="#ef4444"/>
+  <text x="104" y="229" class="badge">cold start</text>
+  <text x="90" y="268" class="label">Every session repeats:</text>
+  <text x="90" y="300" class="small">• dependency install</text>
+  <text x="90" y="328" class="small">• model / data download</text>
+  <text x="90" y="356" class="small">• cache rebuild</text>
+
+  <line x1="390" y1="260" x2="500" y2="260" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="416" y="230" class="small">preserve setup</text>
+
+  <rect x="510" y="140" width="300" height="240" class="box accent"/>
+  <text x="540" y="182" class="panelTitle">Daytona workspace</text>
+  <rect x="540" y="208" width="144" height="30" rx="15" fill="#0f766e"/>
+  <text x="556" y="229" class="badge">project config</text>
+  <text x="540" y="268" class="label">Add once, reuse often:</text>
+  <text x="540" y="300" class="small">• prebuilds</text>
+  <text x="540" y="328" class="small">• environment variables</text>
+  <text x="540" y="356" class="small">• repo + toolchain state</text>
+
+  <line x1="840" y1="260" x2="950" y2="260" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="855" y="230" class="small">measure improvements</text>
+
+  <rect x="960" y="140" width="180" height="240" class="box"/>
+  <text x="990" y="182" class="panelTitle">Outcome</text>
+  <rect x="990" y="208" width="95" height="30" rx="15" fill="#2563eb"/>
+  <text x="1005" y="229" class="badge">faster</text>
+  <text x="990" y="268" class="label">Lower latency</text>
+  <text x="990" y="300" class="small">Less setup</text>
+  <text x="990" y="328" class="small">Fewer misses</text>
+  <text x="990" y="356" class="small">More iteration</text>
+</svg>
